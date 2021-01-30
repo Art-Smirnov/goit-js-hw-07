@@ -1,20 +1,13 @@
-const btn = document.querySelector("#btn")
+const valueRef = document.querySelector("#value")
 
-// event - это и есть обьект события который автоматически
-// передается первым аргументом, мы можем называть его как угодно,
-// хоть qwerty, но чаще всего он называется или e, evt или event
+let counterValue = 0
 
-const handleClick = (event) => {
-  console.log("event: ", event) //откройте консоль чтобы увидеть весь объект целиком
+valueRef.textContent = counterValue
+const decrementBtnRef = document.querySelector('button[data-action="decrement"]')
+const incrementBtnRef = document.querySelector('button[data-action="increment"]')
 
-  console.log("event type: ", event.type) // event type:  click
+decrementBtnRef.addEventListener("click", () => (counterValue -= 1))
 
-  // будет window, так как мы используем стрелочную функцию,
-  // которая использует внешний контекст
-  // Если использовать обычную функцию то this будет самим элементом
-  // button и равен currentTarget
-  console.log("this: ", this)
-  console.log("target: ", event.target) // <button id="btn">CLICK ME!</button>
-}
+const increment = () => {}
 
-btn.addEventListener("click", handleClick)
+console.log(counterValue)
