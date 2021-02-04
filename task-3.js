@@ -16,19 +16,21 @@ const images = [
   },
 ]
 
-const createImg = (img) => {
+const createImgListItem = (img) => {
+  const listItemRef = document.createElement("li")
   const imgRef = document.createElement("img")
 
   imgRef.src = img.url
   imgRef.alt = img.alt
-  imgRef.classList.add("gallery__item")
 
-  return imgRef
+  listItemRef.classList.add("gallery__item")
+  listItemRef.append(imgRef)
+
+  return listItemRef
 }
 
-const imagesList = images.map((img) => createImg(img))
-console.log(imagesList)
+const imagesList = images.map((img) => createImgListItem(img))
+
 const galleryRef = document.querySelector("#gallery")
-galleryRef.classList.add("container")
 
 galleryRef.append(...imagesList)
