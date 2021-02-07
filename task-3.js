@@ -15,22 +15,32 @@ const images = [
     alt: "Group of Horses Running",
   },
 ]
+const galleryRef = document.querySelector("#gallery")
+const galleryMarkup = createGalleryMarkup(images)
 
-const createImgListItem = (img) => {
-  const listItemRef = document.createElement("li")
-  const imgRef = document.createElement("img")
+galleryRef.insertAdjacentHTML("beforeend", galleryMarkup)
 
-  imgRef.src = img.url
-  imgRef.alt = img.alt
-
-  listItemRef.classList.add("gallery__item")
-  listItemRef.append(imgRef)
-
-  return listItemRef
+function createGalleryMarkup(images) {
+  return images.map(({ url, alt }) => `<li class="gallery__item"><img src="${url}" alt="${alt}"></li>`).join("")
 }
 
-const imagesList = images.map((img) => createImgListItem(img))
+/** Варіант з використанням createElement/ */
 
-const galleryRef = document.querySelector("#gallery")
+// const createImgListItem = (img) => {
+//   const listItemRef = document.createElement("li")
+//   const imgRef = document.createElement("img")
 
-galleryRef.append(...imagesList)
+//   imgRef.src = img.url
+//   imgRef.alt = img.alt
+
+//   listItemRef.classList.add("gallery__item")
+//   listItemRef.append(imgRef)
+
+//   return listItemRef
+// }
+
+// const imagesList = images.map((img) => createImgListItem(img))
+
+// const galleryRef = document.querySelector("#gallery")
+
+// galleryRef.append(...imagesList)
