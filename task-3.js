@@ -14,14 +14,14 @@ const images = [
       "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     alt: "Group of Horses Running",
   },
-]
-const galleryRef = document.querySelector("#gallery")
-const galleryMarkup = createGalleryMarkup(images)
+];
+const galleryRef = document.querySelector("#gallery");
+const galleryMarkup = createGalleryMarkup(images);
 
-galleryRef.insertAdjacentHTML("beforeend", galleryMarkup)
+galleryRef.insertAdjacentHTML("beforeend", galleryMarkup);
 
 function createGalleryMarkup(images) {
-  return images.map(({ url, alt }) => `<li class="gallery__item"><img src="${url}" alt="${alt}"></li>`).join("")
+  return images.map(({ url, alt }) => `<li class="gallery__item"><img src="${url}" alt="${alt}"></li>`).join("");
 }
 
 /** Варіант з використанням createElement/ */

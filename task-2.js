@@ -1,15 +1,15 @@
-const ingredients = ["Картошка", "Грибы", "Чеснок", "Помидоры", "Зелень", "Приправы"]
+const ingredients = ["Картошка", "Грибы", "Чеснок", "Помидоры", "Зелень", "Приправы"];
 
 const createListItem = (item) => {
-  const listItemRef = document.createElement("li")
-  listItemRef.textContent = item
+  const listItemRef = document.createElement("li");
+  listItemRef.textContent = item;
 
-  return listItemRef
-}
+  return listItemRef;
+};
 
-const ingredientsList = ingredients.map((ingredient) => createListItem(ingredient))
-const ingredientsListRef = document.querySelector("#ingredients")
+const ingredientsList = ingredients.map((ingredient) => createListItem(ingredient));
+const ingredientsListRef = document.querySelector("#ingredients");
 
-ingredientsListRef.append(...ingredientsList)
+ingredientsListRef.append(...ingredientsList);
 
-console.log(ingredientsListRef)
+console.log(ingredientsListRef);

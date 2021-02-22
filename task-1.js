@@ -1,12 +1,12 @@
-const categoriesRef = document.querySelector("#categories")
-const categoriesQuantity = categoriesRef.children.length
+const categoriesRef = document.querySelector("#categories");
+const categoriesQuantity = categoriesRef.children.length;
 
-console.log(`В списке ${categoriesQuantity} категории.`)
+console.log(`В списке ${categoriesQuantity} категории.`);
 
 categoriesRef.querySelectorAll(".item").forEach((el) => {
-  const categoryName = el.querySelector("h2").textContent
-  const categoryElementsQuantity = el.querySelector("ul").children.length
+  const categoryName = el.querySelector("h2").textContent;
+  const categoryElementsQuantity = el.querySelector("ul").children.length;
 
   console.log(`• Категория:${categoryName}
-• Количество элементов:${categoryElementsQuantity}`)
-})
+• Количество элементов:${categoryElementsQuantity}`);
+});
