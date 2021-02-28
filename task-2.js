@@ -11,5 +11,3 @@ const ingredientsList = ingredients.map((ingredient) => createListItem(ingredien
 const ingredientsListRef = document.querySelector("#ingredients");
 
 ingredientsListRef.append(...ingredientsList);
-
-console.log(ingredientsListRef);
