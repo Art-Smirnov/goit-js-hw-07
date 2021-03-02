@@ -29,3 +29,7 @@ ul {
 #validation-input.invalid {
   border-color: #f44336;
 }
+.title {
+  text-align: center;
+  margin-bottom: 100px;
+}
