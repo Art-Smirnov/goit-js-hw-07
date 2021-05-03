@@ -15,6 +15,7 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
+
 const galleryRef = document.querySelector("#gallery");
 const galleryMarkup = createGalleryMarkup(images);
 
@@ -24,7 +25,7 @@ function createGalleryMarkup(images) {
   return images.map(({ url, alt }) => `<li class="gallery__item"><img src="${url}" alt="${alt}"></li>`).join("");
 }
 
-/** Варіант з використанням createElement/ */
+/* Варіант з використанням createElement */
 
 // const createImgListItem = (img) => {
 //   const listItemRef = document.createElement("li")
